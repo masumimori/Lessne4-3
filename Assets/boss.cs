@@ -7,7 +7,7 @@ public class Boss : MonoBehaviour
 	private int mp = 53; //初期値53
 
 	// 攻撃用の関数 
-    public void Magic()
+	public void Magic(mp)
     {
        if (mp <= 53){
        this.mp -= damage;
