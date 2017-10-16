@@ -12,24 +12,22 @@ public class Boss : MonoBehaviour
        if (mp <= 53){
        this.mp -= damage;
 				Debug.Log("魔法攻撃をした。残りMPは"+damage);
-
+		}
   // 繰り返し文で上に当てはまらない場合
   else {
-		Debug.Log("MPが足りないため魔法が使えない。");
-
-
- void Start ()
-    {
-	// 10回攻撃する繰り返し
-      for (int i = 0; i < 10; i++)
-    // 実行関数　１０回繰りかえして、メッセージあり
-    Boss lastboss = new Boss();
-	lastboss.Magic(5);
+Debug.Log("MPが足りないため魔法が使えない。");
+		}
 }
-
+public class Test : MonoBehaviour
+	void start()
+{ 
+Boss lastboss = new Boss();	
+// 10回攻撃する繰り返し ifの後は上の実行関数
+	for (int i = 0; i < 10; i++){
+		lastboss.Magic(5);
+	}
+}
 // Update is called once per frame
 void Update ()
     {
-		
 	}
-}
